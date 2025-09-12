@@ -48,7 +48,19 @@
     margin: auto;
   }
 
-  @media(max-width: 768px) {
+  @media(max-width: 399px) {
+  .filter:nth-of-type(n+4) {
+    display : none;
+  }
+  #filters {
+    justify-content: space-evenly;
+  }
+  .tax-toggle {
+      display: none;
+    }
+  } 
+
+  @media(max-width: 767px) {
   .filter:nth-of-type(n+5) {
     display : none;
   }
@@ -60,11 +72,10 @@
     }
   }
 
-  @media(max-width: 1250px) {
+  @media(min-width: 768px) and (max-width: 1199px) {
     .filter:nth-of-type(n+6) {
     display : none;
-  }
-    
+  }  
   }
 
 
@@ -110,10 +121,6 @@
 <a href="/listings?category=domes" class="filter <%= category === "domes" ? "active" : "" %>">
     <div><i class="fa-solid fa-igloo"></i></i></div>
     <p>Domes</p>
-  </a>
-  <a href="/listings?category=boats" class="filter <%= category === "boats" ? "active" : "" %>">
-    <div><i class="fa-solid fa-ship"></i></div>
-    <p>Boats</p>
   </a>
 
   <div class="tax-toggle ">
